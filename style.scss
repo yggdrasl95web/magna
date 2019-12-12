@@ -1,0 +1,206 @@
+body{
+    width: 100%;
+    height: 100%;
+    background-color: bisque;
+    margin: 0;
+    font-family: Rubik;
+}
+
+.wrapper{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(28, 1fr);
+    & .sec_one{
+        position: relative;
+        z-index: -1;
+        background-image: url(img/fabryka.png);
+        filter: brightness(0.51);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        grid-column: 1 / -1;
+        grid-row: 1 / span 7;
+    }
+    & nav.navigation{
+        border-bottom: 1px solid rgba(16, 16, 16, 0.12);
+        margin-bottom: 1em;
+        height: 100%;
+        grid-column: 1 / -1;
+        grid-row: 1;
+        & .logo{
+            display: block;
+            float: left;
+            margin: 2em 2em 0 3em;
+        }
+        & .menu{
+            display: block;
+            float: left;
+            height: 100%;
+            font-weight: 500;
+            font-size: 0.9em;
+            & div.menu_s{
+                float: left;
+                height: 100%;
+                margin-right: 1em;
+                opacity: 0.65;
+                &:hover{
+                    border-bottom: 3px solid #c83535;
+                    opacity: 1;
+                }
+                & a{
+                    position: relative;
+                    top: 40%;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    & .right_menu{
+        grid-column: 8 / 15;
+        grid-row: 2 / 7;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        color: #fff;
+        padding-top: 10%;
+        & .rec{
+            background-color: #006cb5;
+            margin: 1%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            &:hover{
+                background-size: cover;
+                background-position: 0;
+                p{
+                    display: none;
+                }
+            }
+        }
+        & .rec1{
+            background-image: url(img/ht_plus.png);
+            background-size: 80%;
+            background-position: 80% 50%;
+            &:hover{
+                background-image: url(img/ht_plus_hover.png);
+            }
+        }
+        & .rec2{
+            background-image: url(img/ultra_db.png);
+            background-size: 100%;
+            background-position: 100% 40%;
+            &:hover{
+                background-image: url(img/ultra_db_hover.png);
+            }
+        }
+        & .rec3{
+            background-image: url(img/skolan.png);
+            grid-row: 2;
+            background-size: 70%;
+            background-position: 80% 20%;
+            &:hover{
+                background-image: url(img/skolan_hover.png);
+            }
+        }
+        & .rec4{
+            background-image: url(img/kg.png);
+            grid-row: 2;
+            grid-column: 3;
+            background-size: 60%;
+            background-position: 35% 70%;
+            &:hover{
+                background-image: url(img/kg_hover.png);
+            }
+        }
+        & .rec5{
+            background-image: url(img/studnie.png);
+            grid-row: 2;
+            grid-column: 4;
+            background-size: 55%;
+            background-position: 110% 45%;
+            &:hover{
+                background-image: url(img/studnie_hover.png);
+            }
+        }
+        & .rec6{
+            background-image: url(img/kg2000.png);
+            grid-row: 3;
+            background-size: 55%;
+            background-position: 110% 70%;
+            &:hover{
+                background-image: url(img/kg2000_hover.png);
+            }
+        }
+        & .rec7{
+            background-image: url(img/magnacor.png);
+            grid-row: 3;
+            background-size: 90%;
+            background-position: 110% 70%;
+            &:hover{
+                background-image: url(img/magnacore_hover.png);
+            }
+        }
+        & .rec8{
+            background-image: url(img/pe_hd.png);
+            grid-row: 3;
+            background-size: 90%;
+            background-position: 110% 70%;
+            &:hover{
+                background-image: url(img/pe_hd_hover.png);
+            }
+        }
+        & .rec9{
+            background-image: url(img/drenaz.png);
+            grid-row: 3;
+            background-size: 90%;
+            background-position: 100% 60%;
+            &:hover{
+                background-image: url(img/drenaz_hover.png);
+            }
+        }
+    }
+    & .left_sec{
+        grid-column: 2/8;
+        grid-row: 3/6;
+        color: #fff;
+        margin: 10% 7% auto 15%;
+        & h2{
+            font-weight: 400;
+            font-size: 2.5em;
+            span{
+                font-weight: 500;
+            }
+        }
+        & p{
+            opacity: 0.66;
+            font-weight: 400;
+            font-size: 0.9em;
+        }
+        & button{
+            border: none;
+            float: left;
+            margin: 0.3em;
+            height: 3em;
+            padding: 0 1em;
+            color: #fff;
+            font-size: 0.88em;
+            font-weight: 700;
+        }
+        & .explore{
+            background-color: #c83535;
+            &:hover{
+                background-color: #b22829;
+            }
+        }
+        & .write{
+            background-color: rgba(16, 16, 16, 0);
+            border: 1px solid #fff;
+            &:hover{
+                color: #000;
+                background-color: #fff;
+                opacity: 1;
+            }
+        }
+    }
+}

@@ -10,7 +10,7 @@ body{
     width: 100vw;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(35, 1fr);
+    grid-template-rows: repeat(31, 1fr);
     & .sec_one{
         position: relative;
         z-index: -1;
@@ -316,12 +316,198 @@ body{
         background-color: #000;
         background-image: url(img/fabryka_2.png);
         background-size: auto 100%;
+        color: #fff;
+        font-size: 17px;
         & .box{
             width: 33vw;
             height: 100%;
-            border: 3px solid red;
+            margin: 0;
+            padding: 0;
             float: left;
-            
+            & div{
+                width: 50%;
+                margin: 30% auto 0;
+            }
+            & h3{
+                font-size: 1.5em;
+            }
+            & p{
+                font-size: 0.8em;
+            }
+            & img{
+                margin-right: 10%;
+            }    
+            & hr{
+                width: 15%;
+                border: 1px solid #2a8ed1;
+            } 
+        }
+        & .box_mid div{
+            border: 2px solid #2a8ed1;
+            padding: 15%;
+            margin-top: 15%;
+        }
+    }
+    & .sec_five{
+        grid-column: 1 / -1;
+        grid-row: 22 / span 6;
+        background-color: #fff;
+        text-align: center;
+        & h2{
+            font-size: 2em;
+        }
+        & hr{
+            width: 10%;
+            border: 1px solid #006cb5;
+        }
+        & p{
+            margin: 3% 15%;
+            color: #7a7a7a;
+        }
+        & .catalogs{
+            width: 30%;
+            height: 20%;
+            margin-left: 8%;
+            margin-right: 4%;
+            background-color: #006cb5;
+            background-image: url(img/bg_catalog.png);
+            background-size: cover;
+            float: left;
+            position: relative;
+        }
+        & .price{
+            height: 30%;
+            width: 30%;
+            background-image: url(img/bg_rury.png);
+            background-color: rgba(#c83535, .8);
+            background-blend-mode: multiply;
+            position: relative;
+            float: left;
+        }
+        & .square{
+            margin-top: 5%;
+            height: 45%;
+            width: 40%;
+            & .ca{
+                position: absolute;
+                bottom: 0;
+                right: 10%;
+                height: 70%;
+            }
+            & span{
+                display: block;
+                width: 50%;
+                position: absolute;
+                text-align: left;
+                left: 5%;
+                top: 10%;
+                font-size: 20px;
+                color: #fff;
+                & h3{
+                    font-size: 1em;
+                }
+                & p{
+                    font-size: 0.6em;
+                    margin: 0;
+                    color: #fff;
+                }
+            }
+            & .btn_check{
+                margin-top: 2em;
+                height: 3em;
+                color: white;
+                border: 2px solid #fff;
+                border-radius: 3px;
+                background: none;
+            }
+        }
+
+    }
+    & .blue_rec{
+        grid-column: 1 / -1;
+        background-color: #006cb5;
+        background-image: url(img/bg_rury2.png);
+        & span{
+            margin: 2% auto 0;
+            display: block;
+            width: 70%;
+            font-size: 20px;
+
+            & p{
+                color: #fff;
+                float: left;
+                margin-right: 40px;
+            }
+            & .btn_write{
+                background: none;
+                color: white;
+                border: 2px solid #fff;
+                height: 3em;
+                border-radius: 3px;
+            }
+
+        }
+    }
+    & footer{
+        grid-column: 1 / -1;
+        grid-row: span 3;
+        background-color: white;
+        position: relative;
+        & .logo{
+            float: left;
+            width: 30%;
+            position: absolute;
+            left: 5%;
+            top: 10%;
+            color: #a0a0a0;
+
+        }
+        & span{
+            position: absolute;
+            float: left;
+            width: 50%;
+            right: 0%;
+            top: 10%;
+            & ul{
+                list-style: none;
+                padding: 0;
+                & li{
+                    color: #a0a0a0;
+                    cursor: pointer;
+                    &:hover{
+                        color: #006cb5;
+                    }
+                }
+            }
+            & img{
+                opacity: .3;
+                &:hover{
+                    opacity: 1;
+                    cursor: pointer;
+                }
+            }
+        }
+        & div{
+            float: left;
+            margin-left: 3%;
+            margin-right: 3%;
+        }
+        & .num{
+            color: #0a609e;
+            font-weight: 600;
+            font-size: 1.2em;
+            margin-bottom: 0;
+        }
+        & .mail{
+            color: #a0a0a0;
+            margin-top: 0;
+        }
+        & h4{
+            margin-bottom: 0;
+        }
+        & p{
+            margin-top: 0;
+            color: #a0a0a0;
         }
     }
 }

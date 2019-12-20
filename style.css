@@ -88,7 +88,7 @@ body {
   float: left;
   position: absolute;
   right: 10%;
-  top: 2%;
+  top: 5%;
 }
 
 .wrapper nav.navigation .serch:hover {
@@ -99,8 +99,14 @@ body {
   background: none;
   color: white;
   border: none;
-  font-size: 0.8rem;
+  font-size: 1rem;
   opacity: 0.8;
+}
+
+@media only screen and (min-width: 1600px) {
+  .wrapper nav.navigation .serch input {
+    font-size: 2rem;
+  }
 }
 
 .wrapper nav.navigation .serch input:focus {

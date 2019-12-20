@@ -67,7 +67,7 @@ body{
             float: left;
             position: absolute;
             right: 10%;
-            top: 2%;
+            top: 5%;
 
             &:hover{
                 border-bottom: 2px solid #fff;
@@ -76,8 +76,11 @@ body{
                 background: none;
                 color: white;
                 border: none;
-                font-size: 0.8rem;
+                font-size: 1rem;
                 opacity: 0.8;
+                @media only screen and (min-width: 1600px) {
+                    font-size: 2rem;
+                }
                 &:focus{
                     border: none;
                     opacity: 1;

@@ -1,7 +1,6 @@
 body {
   width: 100%;
   height: 100%;
-  background-color: bisque;
   margin: 0;
   font-family: Rubik;
 }
@@ -12,8 +11,8 @@ body {
   display: grid;
   -ms-grid-columns: (1fr)[16];
       grid-template-columns: repeat(16, 1fr);
-  -ms-grid-rows: (1fr)[31];
-      grid-template-rows: repeat(31, 1fr);
+  -ms-grid-rows: (1fr)[32];
+      grid-template-rows: repeat(32, 1fr);
 }
 
 .wrapper .sec_one {
@@ -48,6 +47,7 @@ body {
 .wrapper nav.navigation .menu {
   display: block;
   float: left;
+  margin-left: 40px;
   height: 100%;
   font-weight: 500;
   font-size: 0.9em;
@@ -56,8 +56,15 @@ body {
 .wrapper nav.navigation .menu div.menu_s {
   float: left;
   height: 100%;
-  margin-right: 1em;
+  margin-right: 10px;
   opacity: 0.65;
+}
+
+@media only screen and (min-width: 1600px) {
+  .wrapper nav.navigation .menu div.menu_s {
+    font-size: 20px;
+    margin-left: 20px;
+  }
 }
 
 .wrapper nav.navigation .menu div.menu_s:hover {
@@ -79,8 +86,9 @@ body {
   width: fit-content;
   height: 30px;
   float: left;
-  margin-top: 40px;
-  margin-left: 20px;
+  position: absolute;
+  right: 10%;
+  top: 2%;
 }
 
 .wrapper nav.navigation .serch:hover {
@@ -114,6 +122,11 @@ body {
   padding-top: 10px;
   border-radius: 3px;
   background-color: #fff;
+  cursor: pointer;
+}
+
+.wrapper nav.navigation .lang .ln:hover {
+  background-color: #c8c8c8;
 }
 
 .wrapper nav.navigation .lang hr {
@@ -144,6 +157,23 @@ body {
   margin: 1%;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+}
+
+.wrapper .right_menu .rec .cont {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+}
+
+.wrapper .right_menu .rec .cont h2 {
+  font-size: .9rem;
+  margin-bottom: 5%;
+}
+
+.wrapper .right_menu .rec .cont p {
+  margin: 0;
+  font-size: 0.7rem;
 }
 
 .wrapper .right_menu .rec:hover {
@@ -151,7 +181,7 @@ body {
   background-position: 0;
 }
 
-.wrapper .right_menu .rec:hover p {
+.wrapper .right_menu .rec:hover .cont {
   display: none;
 }
 
@@ -632,5 +662,28 @@ body {
 .wrapper footer p {
   margin-top: 0;
   color: #a0a0a0;
+}
+
+.wrapper .last_sec {
+  grid-column: 1 / -1;
+  grid-row: span 1;
+  border-top: 2px solid rgba(227, 227, 227, 0.53);
+  position: relative;
+}
+
+.wrapper .last_sec p {
+  font-size: 0.8rem;
+  color: #bebebe;
+  position: absolute;
+  top: 20%;
+}
+
+.wrapper .last_sec .magna {
+  float: left;
+  left: 15%;
+}
+
+.wrapper .last_sec .empres {
+  right: 15%;
 }
 /*# sourceMappingURL=style.css.map */

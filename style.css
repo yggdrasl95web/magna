@@ -153,8 +153,18 @@ body {
   color: #000;
 }
 
+.wrapper .lang ol li:hover a span {
+  content: url(img/arrow_lang.png);
+  padding: 5px 0 0 3px;
+}
+
 .wrapper .lang ol > li > a {
   color: #fff;
+}
+
+.wrapper .lang ol > li > a span {
+  content: url(img/arrow_lang_white.png);
+  padding: 5px 0 0 3px;
 }
 
 .wrapper .lang ol:hover > ul {

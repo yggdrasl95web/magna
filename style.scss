@@ -121,11 +121,19 @@ body{
                     background-color: #fff;
                     &  a{
                         color: #000;
+                        & span{
+                            content: url(img/arrow_lang.png);
+                            padding: 5px 0 0 3px;
+                        }
                     }
                 }
             }
             & > li > a{
-                color: #fff; 
+                color: #fff;
+                & span{
+                    content: url(img/arrow_lang_white.png);
+                    padding: 5px 0 0 3px;
+                } 
             }
             &:hover >  ul{
                 display: block;

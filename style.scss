@@ -88,32 +88,61 @@ body{
             } 
 
         }
-        & .lang{
-            position: absolute;
-            right: 30px;
-            top: 30px;
-            & .ln{
-                width: 60px;
-                height: 25px;
-                border: 2px solid white;
-                text-align: center;
-                padding-top: 10px;
-                border-radius: 3px;
-                background-color: #fff;
-                cursor: pointer;
-                &:focus{
-                    background-color: #c8c8c8;
-                }
-                
-            }
-            & hr{
-                border: 1px solid #c8c8c8;
-                margin: 0;
-                padding: 0;
-            }
-        }
         
     }
+    // rozwijane menu wyboru języka
+
+    & .lang{
+        position: absolute;
+        right: 40px;
+        top: 10px;
+        width: 60px;
+        height: 80px;
+        & li {
+            list-style-type: none;
+            & > a {
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+        & ul{
+            padding: 0;
+            display: none;
+        }
+        & ol{
+            & li{
+                border: 2px solid #fff;  
+                border-radius: 3px;
+                width: 70px;
+                height: 30px;
+                text-align: center;
+                padding-top: 10px;
+                &:hover{
+                    background-color: #fff;
+                    &  a{
+                        color: #000;
+                    }
+                }
+            }
+            & > li > a{
+                color: #fff; 
+            }
+            &:hover >  ul{
+                display: block;
+                & li{
+                    background-color: white;
+                    border-top: 2px solid #a0a0a0;
+                    & a{
+                        border-radius: 3px;
+                        color: #000;    
+                    }
+                }
+            }
+        }
+
+    }
+
+    //------------------------------
     & .right_menu{
         grid-column: 8 / 15;
         grid-row: 2 / 7;

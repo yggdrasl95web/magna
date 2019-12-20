@@ -114,31 +114,61 @@ body {
   opacity: 1;
 }
 
-.wrapper nav.navigation .lang {
+.wrapper .lang {
   position: absolute;
-  right: 30px;
-  top: 30px;
+  right: 40px;
+  top: 10px;
+  width: 60px;
+  height: 80px;
 }
 
-.wrapper nav.navigation .lang .ln {
-  width: 60px;
-  height: 25px;
-  border: 2px solid white;
-  text-align: center;
-  padding-top: 10px;
-  border-radius: 3px;
-  background-color: #fff;
+.wrapper .lang li {
+  list-style-type: none;
+}
+
+.wrapper .lang li > a {
+  text-decoration: none;
   cursor: pointer;
 }
 
-.wrapper nav.navigation .lang .ln:focus {
-  background-color: #c8c8c8;
+.wrapper .lang ul {
+  padding: 0;
+  display: none;
 }
 
-.wrapper nav.navigation .lang hr {
-  border: 1px solid #c8c8c8;
-  margin: 0;
-  padding: 0;
+.wrapper .lang ol li {
+  border: 2px solid #fff;
+  border-radius: 3px;
+  width: 70px;
+  height: 30px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.wrapper .lang ol li:hover {
+  background-color: #fff;
+}
+
+.wrapper .lang ol li:hover a {
+  color: #000;
+}
+
+.wrapper .lang ol > li > a {
+  color: #fff;
+}
+
+.wrapper .lang ol:hover > ul {
+  display: block;
+}
+
+.wrapper .lang ol:hover > ul li {
+  background-color: white;
+  border-top: 2px solid #a0a0a0;
+}
+
+.wrapper .lang ol:hover > ul li a {
+  border-radius: 3px;
+  color: #000;
 }
 
 .wrapper .right_menu {

@@ -1,7 +1,6 @@
 body{
     width: 100%;
     height: 100%;
-    background-color: bisque;
     margin: 0;
     font-family: Rubik;
 }
@@ -10,7 +9,7 @@ body{
     width: 100vw;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(31, 1fr);
+    grid-template-rows: repeat(32, 1fr);
     & .sec_one{
         position: relative;
         z-index: -1;
@@ -36,14 +35,19 @@ body{
         & .menu{
             display: block;
             float: left;
+            margin-left: 40px;
             height: 100%;
             font-weight: 500;
             font-size: 0.9em;
             & div.menu_s{
                 float: left;
                 height: 100%;
-                margin-right: 1em;
+                margin-right: 10px;
                 opacity: 0.65;
+                @media only screen and (min-width: 1600px) {
+                    font-size: 20px;
+                    margin-left: 20px;
+                }
                 &:hover{
                     border-bottom: 3px solid #c83535;
                     opacity: 1;
@@ -61,8 +65,10 @@ body{
             width: fit-content;
             height: 30px;
             float: left;
-            margin-top: 40px;
-            margin-left: 20px;
+            position: absolute;
+            right: 10%;
+            top: 2%;
+
             &:hover{
                 border-bottom: 2px solid #fff;
             }
@@ -91,9 +97,14 @@ body{
                 padding-top: 10px;
                 border-radius: 3px;
                 background-color: #fff;
+                cursor: pointer;
+                &:hover{
+                    background-color: #c8c8c8;
+                }
+                
             }
             & hr{
-                border: 1px solid #c8c8c8;;
+                border: 1px solid #c8c8c8;
                 margin: 0;
                 padding: 0;
             }
@@ -113,10 +124,24 @@ body{
             margin: 1%;
             background-repeat: no-repeat;
             background-size: cover;
+            position: relative;
+            .cont{
+                position: absolute;
+                bottom: 10%;
+                left: 10%;
+                h2{
+                    font-size: .9rem;
+                    margin-bottom: 5%;
+                }
+                p{
+                    margin: 0;
+                    font-size: 0.7rem;
+                }    
+            }
             &:hover{
                 background-size: cover;
                 background-position: 0;
-                p{
+                .cont{
                     display: none;
                 }
             }
@@ -510,4 +535,27 @@ body{
             color: #a0a0a0;
         }
     }
+    & .last_sec{
+        grid-column: 1 / -1;
+        grid-row: span 1;
+        border-top: 2px solid rgba(227, 227, 227, .53);
+        position: relative;
+        & p{
+            font-size: 0.8rem;
+            color: #bebebe;
+            position: absolute;
+            top: 20%;
+        }
+        & .magna{
+            float: left;
+            left: 15%;
+        }
+        & .empres{
+            right: 15%;
+        }
+
+    }
 }
+
+
+
